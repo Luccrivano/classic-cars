@@ -1,0 +1,265 @@
+body {
+  /* background-color: #cdcbcb; */
+  margin: 0;
+  border: 1px solid #e90f0f;
+}
+
+footer {
+  background-color: rgb(37, 16, 134);
+  display: flex;
+  flex-direction: column;
+  grid-area: footer;
+  color: #fff;
+  /*margin-top: 10px;*/
+}
+
+.text {
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.rrss {
+  display: flex;
+}
+/*aside {
+  background-color: #dfddde;
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400 px;
+}*/
+
+.selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px #174cf7;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+nav {
+  background-color: #174cf7;
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  color: #fff;
+}
+
+.icon-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+.icon-colapse {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  padding: 0 1em;
+}
+
+main {
+  background-color: #fff;
+  grid-area: main;
+  overflow-y: scroll;
+}
+
+.paginacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginas {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #dfddde;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 1em;
+
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 400ms ease-out;
+  cursor: default;
+  border: 5px #4d4d4d;
+}
+
+.cards:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+img {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0.3em;
+  border-radius: 10px;
+}
+
+.contenido-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  text-align: center;
+  align-items: center;
+}
+
+.my-button {
+  margin-top: 1em;
+  padding: 10px 20px;
+  background-color: #035068dc;
+  color: white;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: #45a049;
+}
+
+.my-button:active {
+  background-color: #3e8e41;
+}
+/*media query celular*/
+@media (max-width: 576px) {
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 7em 1fr 5em;
+    grid-template-areas: "nav" "aside" "main" "footer";
+  }
+  ul {
+    display: none;
+  }
+
+  aside {
+    background-color: #dfddde;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400 px;
+  }
+}
+
+/* .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+} */
+
+/*@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: 4em 1fr;
+    grid-template-rows: 4em 1fr 4em;
+    grid-template-areas: "nav nav" "aside main" "footer footer";
+  }
+  
+}*/
+
+/*media query escritorio*/
+@media (min-width: 577px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 12em 1fr;
+    grid-template-areas: "nav aside" "nav main" "footer main";
+  }
+
+  /*.grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    gap: 1em;
+  }*/
+
+  .grid {
+    display: grid;
+    display: flex;
+
+    gap: 1em;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;
+    margin-bottom: 1em;
+
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease-out;
+    cursor: default;
+    border: 5px #4d4d4d;
+  }
+
+  nav {
+    background-color: #174cf7;
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1em;
+    color: #fff;
+  }
+
+  aside {
+    background-color: #dfddde;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul li {
+    display: flex;
+    list-style: none;
+    padding-right: 30px;
+    margin-top: 1em;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .icon-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+  .icon-colapse {
+    display: none;
+  }
+}
